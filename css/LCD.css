@@ -1,0 +1,67 @@
+/** LCD Base **/
+#standard {background: url(../img/lcd/standard.png) no-repeat center center;}  
+#half-step {background: url(../img/lcd/half-step.png) no-repeat center center;}  
+#full-step {background: url(../img/lcd/full-step.png) no-repeat center center;}  
+#drop-d {background: url(../img/lcd/drop-d.png) no-repeat center center;}  
+#drop-c {background: url(../img/lcd/drop-c.png) no-repeat center center;}  
+#open-d {background: url(../img/lcd/open-d.png) no-repeat center center;}  
+#dadgad {background: url(../img/lcd/dadgad.png) no-repeat center center;}  
+#iris {background: url(../img/lcd/iris.png) no-repeat center center;}  
+
+
+/** LCD Overlays **/
+#standard #LCD1.active {background: url(../img/lcd_overlay/E.png) no-repeat 5px 9px;}
+#standard #LCD2.active {background: url(../img/lcd_overlay/A.png) no-repeat 4px 8px;}
+#standard #LCD3.active {background: url(../img/lcd_overlay/D.png) no-repeat 3px 9px;}
+#standard #LCD4.active {background: url(../img/lcd_overlay/G.png) no-repeat 2px 9px;}
+#standard #LCD5.active {background: url(../img/lcd_overlay/B.png) no-repeat 1px 9px;}
+#standard #LCD6.active {background: url(../img/lcd_overlay/E.png) no-repeat -1px 9px;}
+
+#half-step #LCD1.active {background: url(../img/lcd_overlay/Eb.png) no-repeat 5px 9px;}
+#half-step #LCD2.active {background: url(../img/lcd_overlay/Ab.png) no-repeat 0px 9px;}
+#half-step #LCD3.active {background: url(../img/lcd_overlay/Db.png) no-repeat -1px 9px;}
+#half-step #LCD4.active {background: url(../img/lcd_overlay/Gb.png) no-repeat -2px 9px;}
+#half-step #LCD5.active {background: url(../img/lcd_overlay/Bb.png) no-repeat 0px 9px;}
+#half-step #LCD6.active {background: url(../img/lcd_overlay/Eb.png) no-repeat -1px 9px;}
+
+#full-step #LCD1.active {background: url(../img/lcd_overlay/D.png) no-repeat 4px 9px;}
+#full-step #LCD2.active {background: url(../img/lcd_overlay/G.png) no-repeat 4px 9px;}
+#full-step #LCD3.active {background: url(../img/lcd_overlay/C.png) no-repeat 3px 9px;}
+#full-step #LCD4.active {background: url(../img/lcd_overlay/F.png) no-repeat 1px 9px;}
+#full-step #LCD5.active {background: url(../img/lcd_overlay/A.png) no-repeat 1px 8px;}
+#full-step #LCD6.active {background: url(../img/lcd_overlay/D.png) no-repeat -2px 9px;}
+
+#drop-d #LCD1.active {background: url(../img/lcd_overlay/D.png) no-repeat 4px 9px;}
+#drop-d #LCD2.active {background: url(../img/lcd_overlay/A.png) no-repeat 4px 8px;}
+#drop-d #LCD3.active {background: url(../img/lcd_overlay/D.png) no-repeat 3px 9px;}
+#drop-d #LCD4.active {background: url(../img/lcd_overlay/G.png) no-repeat 2px 9px;}
+#drop-d #LCD5.active {background: url(../img/lcd_overlay/B.png) no-repeat 1px 9px;}
+#drop-d #LCD6.active {background: url(../img/lcd_overlay/E.png) no-repeat -1px 9px;}
+
+#drop-c #LCD1.active {background: url(../img/lcd_overlay/C.png) no-repeat 4px 9px;}
+#drop-c #LCD2.active {background: url(../img/lcd_overlay/G.png) no-repeat 4px 9px;}
+#drop-c #LCD3.active {background: url(../img/lcd_overlay/C.png) no-repeat 3px 9px;}
+#drop-c #LCD4.active {background: url(../img/lcd_overlay/F.png) no-repeat 1px 9px;}
+#drop-c #LCD5.active {background: url(../img/lcd_overlay/A.png) no-repeat 1px 8px;}
+#drop-c #LCD6.active {background: url(../img/lcd_overlay/D.png) no-repeat -2px 9px;}
+
+#open-d #LCD1.active {background: url(../img/lcd_overlay/D.png) no-repeat 4px 9px;}
+#open-d #LCD2.active {background: url(../img/lcd_overlay/A.png) no-repeat 4px 8px;}
+#open-d #LCD3.active {background: url(../img/lcd_overlay/D.png) no-repeat 3px 9px;}
+#open-d #LCD4.active {background: url(../img/lcd_overlay/FH.png) no-repeat 4px 9px;}
+#open-d #LCD5.active {background: url(../img/lcd_overlay/A.png) no-repeat -1px 8px;}
+#open-d #LCD6.active {background: url(../img/lcd_overlay/D.png) no-repeat -4px 9px;}
+
+#dadgad #LCD1.active {background: url(../img/lcd_overlay/D.png) no-repeat 4px 9px;}
+#dadgad #LCD2.active {background: url(../img/lcd_overlay/A.png) no-repeat 4px 8px;}
+#dadgad #LCD3.active {background: url(../img/lcd_overlay/D.png) no-repeat 3px 9px;}
+#dadgad #LCD4.active {background: url(../img/lcd_overlay/G.png) no-repeat 2px 9px;}
+#dadgad #LCD5.active {background: url(../img/lcd_overlay/A.png) no-repeat 1px 8px;}
+#dadgad #LCD6.active {background: url(../img/lcd_overlay/D.png) no-repeat -2px 9px;}
+
+#iris #LCD1.active {background: url(../img/lcd_overlay/B.png) no-repeat 5px 9px;}
+#iris #LCD2.active {background: url(../img/lcd_overlay/D.png) no-repeat 4px 9px;}
+#iris #LCD3.active {background: url(../img/lcd_overlay/D.png) no-repeat 3px 9px;}
+#iris #LCD4.active {background: url(../img/lcd_overlay/D.png) no-repeat 2px 9px;}
+#iris #LCD5.active {background: url(../img/lcd_overlay/D.png) no-repeat 1px 9px;}
+#iris #LCD6.active {background: url(../img/lcd_overlay/D.png) no-repeat -2px 9px;}

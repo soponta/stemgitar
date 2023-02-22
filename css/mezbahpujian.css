@@ -1,0 +1,291 @@
+/*= 
+=Name====| GUITAR TUNER CHROME/WEB APP
+=Authors=| Yosh Talwar and Tim West
+=Website=| ytalwar.com | www.timwestdesigns.com
+=Date====| June 2011
+=*/
+
+@import url("reset.css");
+@import url("LCD.css");
+
+html {
+	height: 100%;
+	min-width: 900px;
+	min-height: 600px;
+}
+body {
+	height: 100%;
+	background: #000 url(../img/bg.png) no-repeat center 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+	background-size: auto 100%;
+	overflow: hidden;
+}
+nav {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	background: url(../img/nav-bg.png) repeat center bottom;
+	box-shadow: 0 0 10px #000;
+	z-index: 500;
+}
+nav ul {
+	width: 900px;
+	height: 70px;
+	margin: 10px auto 0;
+	list-style: none;
+}
+nav > ul > li {
+	width: 300px;
+	height: 70px;
+	float: left;
+}
+
+/** NAV1: FAQ Button **/
+nav ul li:first-child div {
+	width: 60px;
+	height: 60px;
+	margin: 8px auto 0;
+	background: url(../img/logoo.png) no-repeat center top;
+}
+
+/** NAV2: LCD **/
+nav .LCD div {
+	width: 39px;
+	height: 60px;
+	float: left;
+}
+nav .LCD div:first-child {
+	margin-left:34px;
+}
+#half-step #LCD1 {
+	width: 43px;
+}
+#half-step #LCD4,#half-step #LCD5,#half-step #LCD6 {
+	width: 37px;
+}
+#open-d #LCD4{
+	width: 41px;
+}
+
+/** NAV3: DROPDOWN **/
+nav .dropdown {
+	width: 130px;
+	height: 36px;
+	color: #fff;
+	margin: 16px 0 0 85px;
+	padding: 0 0 0 15px;
+	line-height: 36px;
+	font-weight: bold;
+	background: #222427 url(../img/dropdown.png) center;
+	border: 1px solid #1a1c21;
+	border-top: 0;
+	border-radius: 5px;
+	box-shadow:inset 0 0 2px rgba(0,0,0,0.5);
+	text-shadow: 0 0 1px #000;
+	cursor: pointer;
+}
+nav .dropdown:hover,nav .dropdown:focus {
+	border-radius: 5px 5px 0 0;
+}
+nav .dropdown ul {
+	margin: 0 0 0 -15px;
+	text-align: center;
+	height: 0;
+	width: 145px;
+	overflow: hidden;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 0 10px #222;
+}
+nav .dropdown ul li {
+	height: 30px;
+	line-height: 30px;
+	background: #ccc url(../img/dropdown-li-bg.png) no-repeat center;
+	border-top: 1px solid #bbb;
+}
+nav .dropdown ul li:last-child {
+	border-radius: 0 0 7px 7px;
+}
+nav .dropdown ul li:nth-child(2n+1) {
+	background: #ddd url(../img/dropdown-li-bg.png) no-repeat center;
+}
+nav .dropdown ul li a {
+	display: block;
+	height: 31px;
+	margin: -1px 0 0 0;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #eee;
+}
+nav .dropdown ul li a:hover,nav .dropdown ul li a:focus {
+	background: #222427;
+	border-top: 1px solid #000;
+	color: #ec6978;
+	text-shadow: 0 1px 1px #111;
+}
+
+/** BUTTONS **/
+#buttons {
+	width: 100%;
+	min-width: 900px;
+	height: 100px;
+	position: fixed;
+	bottom: 0;
+	background: url(../img/buttons-bg.png) repeat;
+	box-shadow: -10px 0 10px #111;	
+}
+#buttons div{
+	margin: 0 auto;
+	width: 600px;
+}
+#buttons ul {
+	background: url(../img/buttons-bg2.png) center no-repeat;
+}
+#buttons h6 {
+	background: rgba(0,0,0,0.2);
+	font-family: "Lucida Grande", Verdana;
+	font-size: 10px;
+	font-weight: bold;
+	color: #656771;
+	padding: 5px 8px;
+	float: left;
+	margin: 28px 0 0 -143px;	
+	border-radius: 4px;
+	text-shadow: 0 1px 0 #1f2026;
+}
+#notes{
+	width: 600px;
+	height: 80px;
+	margin: 10px auto;
+	list-style: none;
+}
+#notes li{
+	width: 100px;
+	height: 80px;
+	float: left;
+	background: url(../img/button-off.png) no-repeat center center;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#notes li:focus{
+	background: url(../img/button-focus.png) center center no-repeat;
+}
+#notes li.active{
+	background: url(../img/button-on.png) center center no-repeat;
+}
+
+/** FAQ **/
+#FAQ {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1000;
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+#FAQ div {
+	width: 650px;
+	height: auto;
+	margin: 50px auto 0;
+	position: relative;
+	padding: 50px;
+	background: #fff url(../img/FAQ-bg.png) repeat-x center -4px ;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 0 20px #000;
+}
+#FAQ h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #444;
+	padding: 20px 0 20px 75px;
+	background: #f6f6f6 url(../img/icons/icon-56.png) no-repeat 5px center;
+	border-bottom: 2px solid #ddd;
+}
+#FAQ small {
+	font-size: 12px;
+	color: #999;
+}
+#FAQ h2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #444;
+	margin: 20px 0 0;
+	padding: 10px;
+}
+#FAQ h3 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #444;
+	margin: 15px 0 3px;
+	padding: 0 0 0 10px;
+}
+#FAQ p {
+	font-size: 13px;
+	line-height: 17px;
+	padding: 0 10px;
+}
+#FAQ ul {
+	margin: 6px 30px 0;
+	list-style: none;
+}
+#FAQ ul li{
+	font-size: 13px;
+	margin: 3px 0 0 0;
+}
+#FAQ #close-button {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: -21px;
+	right: -25px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/quit.png) no-repeat center -50px;
+	color: #d7bbfa;
+	font-size: 16px;
+	cursor: pointer;
+	box-shadow: none;
+}
+#FAQ #close-button:hover {
+	background: url(../img/quit.png) no-repeat center 1px;
+	color: #fff;
+}
+
+/*
+                                        _
+                                      /   )
+                                     @| ?\
+       ._-_.    _____________________@| ?\\
+      +|\G/|+  | ____________________@| ?\\\
+      +|\./|+  || O  o o o  =|=  |  =@| ?\\\\
+      +|\./|+  || O  o o o   |  =|=  | -- ====
+       `|H|'   ||______________________||\ \\\
+        |a|    |________________________| \ \\\
+        |H|    ||MM88MM<<<?<<<XHHHHMMMM||  \ \\\
+        |a|    ||M88MM<<<?<<<XHHHMMMMMM||   \ \\\
+        |H|    ||88MM<<<?<<<XHHHMMMMMMM||    \ \\\
+        |a|    ||8MM<<<?<<<XHHHHMMMMMMM||     \ \\\
+        |H|    ||MM<<<?<<<XHHHHMMMMMMMM||      \ \\\
+        |H|    ||M<<<?<<<XHHHHMMMMMMMMM||       \ \\\
+  _-_   |H|   _-_<<<?<<<XHHHHMMMMMMMMMM||        \ \\\
+ /   \  |H|  /   \<?<<<XHHHHMMMMMMMMMMM||         \ \\\
+ |    \_|a|_/    |?<<<XHHHHMMMMMMMMMMMM||          \ \\\
+ \      |H|      /<<<XHHHHMMMMMMMMMMMMR||    =_     \ \\\   _
+  \     |H|     /<<<XHHHHMMMMMMMMMMMRMM||   || |     \ \\\  ||\
+   |    '"'    |<<<XHHHHMMMMMMMMMMMRMM8||   | | \   // \\\\ /  \
+  /     ===     \<XHHHHMMMMMMMMMMMRMM8R||    | |  \-    \\\\   |
+ /      ===   !  \HHHHMMMMMMMMMMMRMM8RM||     \ \       \\\\\\ \
+|             | o |HMMMMMMMMMMMMMM988MM||        \\       \\\\  \
+|      +---+ /  o |MMMMMMMMMMMMMM988MM<||          \\      \\\\   \
+\       ___ /  o  /M/MMMMMRMMMRMM88MM<<||           \ \     \\\\     \
+ \     |HHH|    l/MMMMMMMRMMMRMM88MM<<<||           | |     \\\\\\     \
+  `-_   \_/   _-MMRMMMMMRMMMRMM88MM<<<?||           | |       \\\\   (O \
+     """"""""' ~~~V~~""~~~~~~~~~~~~~~V~~~           \ \      <o=====o    |
+                                                     \ \              (O |
+                                                       \\                /
+                                                         \\_            /
+                                                            --_______--
+*/
